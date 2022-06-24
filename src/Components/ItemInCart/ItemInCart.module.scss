@@ -1,0 +1,23 @@
+@import '../../common/mixins';
+
+.item{
+  border: 1px solid;
+  @include flexStyle(row,flex-start, center);
+  flex-wrap: nowrap;
+ margin-bottom: 10px;
+    .img{
+      width: 100px;
+      height: 100px;
+      background: gray no-repeat center scroll;
+      background-size:cover;
+    }
+  .info{
+    @include flexStyle(column,flex-start, stretch);
+    padding: 2px 20px;
+    width: 100%;
+    .options{
+      @include flexStyle(row,space-between, stretch);
+      background-color: yellow;
+    }
+  }
+}

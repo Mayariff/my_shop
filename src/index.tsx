@@ -1,15 +1,28 @@
-import React from 'react';
+import React, {createContext} from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import  './index.css';
+import App from './App/App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter} from "react-router-dom";
+import {auth, db, provider} from "./firebase/firebase-config";
+
+
+export const Context = createContext<any>({})
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+      <BrowserRouter>
+      <Context.Provider value={{
+         auth,
+          db,
+        provider}
+      }>
+          <App/>
+      </Context.Provider>
+      </BrowserRouter>
   </React.StrictMode>
 );
 

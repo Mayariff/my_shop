@@ -1,0 +1,6 @@
+@import '../../common/mixins';
+
+.login{
+  @include flexStyle(column,center, center);
+  background-color: gray;
+}

@@ -1,0 +1,15 @@
+@import '../../common/mixins';
+
+.layout{
+    background-color: #b3dafd;
+    .container{
+        border: 1px solid;
+        height: 100%;
+        width: 80%;
+        margin: 0 auto;
+        padding: 2% 0;
+        background-color: white;
+        @include flexStyle(row,center, center);
+        min-height: 100vh;
+    }
+}

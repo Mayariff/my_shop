@@ -1,0 +1,21 @@
+@import '../../common/mixins';
+
+.itemContainer{
+  border: 1px solid rgba(0,0,0,.05);
+  background-color: pink;
+  padding: 2%;
+  margin: 5% 0;
+  text-decoration: none;
+  color: black;
+
+  .img{
+    height: 250px;
+    width: 250px;
+    margin-bottom: 10px;
+    background: gray no-repeat center scroll;
+    background-size:cover;
+  }
+  .info{
+    @include flexStyle(row,space-between, flex-end);
+  }
+}

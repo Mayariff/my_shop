@@ -1,0 +1,19 @@
+@mixin flexStyle($dir, $jContent, $Items){
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jContent;
+  align-items: $Items;
+  flex-wrap:wrap;
+}
+
+@mixin pseudoImage($bgSizeW,$bgSizeH, $width, $height, $url){
+  display: block;
+  position: absolute;
+  content: '';
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: $bgSizeH $bgSizeW;
+  width: $width;
+  height: $height;
+  background-image: url($url);
+}

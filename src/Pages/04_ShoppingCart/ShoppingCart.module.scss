@@ -1,0 +1,26 @@
+@import '../../common/mixins';
+
+.container{
+  @include flexStyle(column,flex-start, stretch);
+  flex-wrap: nowrap;
+   width: 100%;
+  .shoppingCart{
+    @include flexStyle(row,space-between, stretch);
+  .itemsContainer{
+   @include flexStyle(column,flex-start, stretch);
+    flex-wrap: nowrap;
+    width: 70%;
+    min-width: 260px;
+  }
+ .form{
+    border: 1px solid;
+   @include flexStyle(column,flex-start,center);
+   width: 30%;
+   min-width: 200px;
+    }
+}
+  .wishContainer{
+    background-color: red;
+    padding-top:4% ;
+  }
+}

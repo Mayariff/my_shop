@@ -1,0 +1,47 @@
+@import '../../common/mixins';
+
+.aboutBrandContainer{
+   width: 100%;
+  @include flexStyle(column,inherit,inherit);
+  .blockInfo{
+    @include flexStyle(row,space-between,center);
+    .info{
+      width: 50%;
+      background-color: red;
+      @include flexStyle(column, space-between,flex-start);
+      padding-right: 6px;
+      .header{
+        margin: 0 0 20px 0;
+        em{
+          font-style: italic;
+        }
+      }
+      .blockquote{
+        margin-top: 20%;
+        font-size: 24pt;
+        font-family: 'Playfair Display';
+        position: relative;
+        &::before{
+          @include pseudoImage(60px,60px,58px,58px, 'https://preview.wolfthemes.live/app/themes/prequelle/assets/img/t/p_quote_dark.png');
+          left: -14px;
+          top: -40px;
+          opacity: 1;
+        }
+      }
+    }
+    .image{
+      width: 400px;
+      height: 400px;
+      background-color: darkorange;
+    }
+  }
+  .blockButton{
+    margin-top: 4%;
+    @include flexStyle(column,inherit,center);
+    .accentPhrase{
+      text-align: center;
+    }
+  }
+ }
+
+

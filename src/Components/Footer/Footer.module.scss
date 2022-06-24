@@ -1,0 +1,12 @@
+@import '../../common/mixins';
+
+.footer{
+    background-color: blueviolet;
+    width: 100%;
+    min-height: 60px;
+  @include flexStyle(row,space-between, flex-end);
+  padding: 20px 10px;
+    .instagram{
+      @include flexStyle(column,space-between, flex-start);
+    }
+}

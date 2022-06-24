@@ -1,0 +1,17 @@
+@import '../../common/mixins';
+
+.productCard{
+  @include flexStyle(row,space-between, center);
+  .img{
+    height: 400px;
+    width: 400px;
+    background: gray no-repeat center scroll;
+    background-size:cover;
+  }
+  .card{
+    background-color: red;
+    width: 50%;
+    padding-left: 6px;
+    @include flexStyle(column,space-around, flex-start);
+  }
+}

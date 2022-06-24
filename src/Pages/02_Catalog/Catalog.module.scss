@@ -1,0 +1,5 @@
+@import '../../common/mixins';
+
+.catalog{
+  @include flexStyle(row,space-around, center);
+}
